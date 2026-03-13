@@ -1,6 +1,6 @@
 # Pure.DI Lifetime Regression Repro
 
-This is a minimal console app for comparing the behavior of Pure.DI `2.3.3` and `2.3.4`.
+This is a minimal console app for comparing the behavior of Pure.DI `2.3.3`, `2.3.4`, and `2.3.5-beta1`.
 
 ## Purpose
 
@@ -15,6 +15,7 @@ This verifies whether `MyDialog` is created on every resolution or whether the s
 ```powershell
 dotnet run --project 2.3.3/PureDiLifetimeRegression.csproj
 dotnet run --project 2.3.4/PureDiLifetimeRegression.csproj
+dotnet run --project 2.3.5.beta1/PureDiLifetimeRegression.csproj
 ```
 
 Each version is placed in a separate folder to avoid sharing `obj/bin` outputs.
@@ -23,7 +24,8 @@ Each version is placed in a separate folder to avoid sharing `obj/bin` outputs.
 
 - `2.3.3`: `ReferenceEquals = False`
 - `2.3.4`: `ReferenceEquals = True`
+- `2.3.5-beta1`: `ReferenceEquals = True`
 
 ## Expected Usage
 
-When attaching this to an issue, include the output difference between `2.3.3` and `2.3.4` as-is.
+When attaching this to an issue, include the output differences across these versions as-is.
